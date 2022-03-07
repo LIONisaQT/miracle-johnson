@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,10 @@ namespace Disco
 {
 	public class DancePadCell : MonoBehaviour
 	{
-		private Image _cellImage;
+		[SerializeField] private Image _cellImage;
+		private Animator _animator;
+
+		private NoteData[] _noteData;
 
 		[SerializeField] private KeyCode? _key;
 		[SerializeField] private bool _isSelected = false;
@@ -16,7 +20,7 @@ namespace Disco
 
 		private void Awake()
 		{
-			_cellImage = GetComponent<Image>();
+			_animator = GetComponent<Animator>();
 		}
 
 		public void ToggleCell(bool isOn)
@@ -35,6 +39,21 @@ namespace Disco
 			{
 				print("Ya dun fucked up");
 			}
+		}
+
+		public IEnumerator PlayNote(NoteData.ValidKeys expectedKey, float timeInSong)
+		{
+			yield return new WaitForSeconds(timeInSong - 3);
+
+			print($"{name}: Expecting user to press {expectedKey} at {timeInSong}s");
+			_animator.Play("NotePreview");
+			StartCoroutine(MissNote(timeInSong));
+		}
+
+		private IEnumerator MissNote(float timeInSong)
+		{
+			yield return new WaitForSeconds(timeInSong);
+			print($"{name}: Window missed!");
 		}
 	}
 }

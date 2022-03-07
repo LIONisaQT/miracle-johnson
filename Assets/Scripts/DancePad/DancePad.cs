@@ -31,6 +31,16 @@ namespace Disco
 			_selectedCell.ToggleCell(true);
 		}
 
+		public void SendNotedata(NoteData[] data)
+		{
+			foreach (NoteData note in data)
+			{
+				var cellAtLocation = _cells[note.location];
+				cellAtLocation.StartCoroutine(cellAtLocation.PlayNote(note.key, note.timeInSong));
+			}
+		}
+
+		#region Input
 		private void HandleInput()
 		{
 			if (Input.GetKeyDown(KeyCode.W)
@@ -76,5 +86,6 @@ namespace Disco
 
 			SelectCell(_selectedCellIndex);
 		}
+		#endregion
 	}
 }
