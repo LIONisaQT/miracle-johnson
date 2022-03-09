@@ -27,3 +27,6 @@ MonoBehaviour:
   - location: 3
     key: 3
     timeInSong: 6
+  - location: 12
+    key: 1
+    timeInSong: 7

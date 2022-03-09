@@ -36,7 +36,8 @@ namespace Disco
 			foreach (NoteData note in data)
 			{
 				var cellAtLocation = _cells[note.location];
-				cellAtLocation.StartCoroutine(cellAtLocation.PlayNote(note.key, note.timeInSong));
+				cellAtLocation.Enqueue(note);
+				cellAtLocation.BeginPlaying();
 			}
 		}
 

@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 namespace Disco
@@ -12,6 +10,8 @@ namespace Disco
 
 		[SerializeField] private DancePad _dancePad;
 		[SerializeField] private SongData _songData;
+
+		public AudioSource AudioPlayer => _audioPlayer;
 
 		private void Awake()
 		{
@@ -30,7 +30,7 @@ namespace Disco
 		private void Start()
 		{
 			PlaySong();
-			_dancePad.SendNotedata(_songData.Notes);
+			SendNotes();
 		}
 
 		private void PlaySong()
@@ -38,5 +38,18 @@ namespace Disco
 			_audioPlayer.clip = _songData.Song;
 			_audioPlayer.Play();
 		}
+
+		private void SendNotes()
+		{
+			_dancePad.SendNotedata(_songData.Notes);
+		}
+
+		//private void Update()
+		//{
+		//	if (_audioPlayer.isPlaying)
+		//	{
+		//		print($"Time in song: {Math.Floor(_audioPlayer.time)}");
+		//	}
+		//}
 	}
 }
