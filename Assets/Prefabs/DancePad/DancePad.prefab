@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6142809514095579062}
   - component: {fileID: 6142809514095579060}
   - component: {fileID: 6142809514095579061}
+  - component: {fileID: 8114638887937407837}
   m_Layer: 0
   m_Name: DancePad
   m_TagString: Untagged
@@ -133,6 +134,105 @@ MonoBehaviour:
   - {fileID: 5682192653623522091}
   - {fileID: 5682192653302027402}
   - {fileID: 5682192653644827963}
+  _successSfx: {fileID: 8300000, guid: 6b80e4ab429d0f9489d1437afb5cf4c8, type: 3}
+  _failSfx: {fileID: 0}
+  _bigComboSfx: {fileID: 8300000, guid: 7ec12b8a70a1cfd4f92a18a89fe4d60e, type: 3}
+--- !u!82 &8114638887937407837
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6142809514095579058}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &3923784912660918896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224,6 +324,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell
@@ -337,6 +441,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (5)
@@ -450,6 +558,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (7)
@@ -563,6 +675,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (3)
@@ -676,6 +792,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (19)
@@ -789,6 +909,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (1)
@@ -902,6 +1026,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (11)
@@ -1015,6 +1143,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (8)
@@ -1128,6 +1260,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (20)
@@ -1241,6 +1377,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (14)
@@ -1354,6 +1494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (18)
@@ -1467,6 +1611,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (17)
@@ -1580,17 +1728,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (16)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
---- !u!224 &5102030417694997137 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1437115673792113884, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
-  m_PrefabInstance: {fileID: 6142809515167635021}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5682192653202932006 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
@@ -1602,6 +1749,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb87efbcbe8ce34fb3a39e91a83c036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &5102030417694997137 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1437115673792113884, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+  m_PrefabInstance: {fileID: 6142809515167635021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6142809515307014813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1693,6 +1845,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (13)
@@ -1806,6 +1962,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (9)
@@ -1919,6 +2079,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (12)
@@ -2032,17 +2196,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
---- !u!224 &5102030417315461230 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1437115673792113884, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
-  m_PrefabInstance: {fileID: 6142809515475932338}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5682192653377012697 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
@@ -2054,6 +2217,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb87efbcbe8ce34fb3a39e91a83c036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &5102030417315461230 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1437115673792113884, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+  m_PrefabInstance: {fileID: 6142809515475932338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6142809515536204769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2145,6 +2313,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (23)
@@ -2258,6 +2430,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (4)
@@ -2371,6 +2547,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (24)
@@ -2484,6 +2664,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (22)
@@ -2597,6 +2781,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (15)
@@ -2710,6 +2898,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (21)
@@ -2823,17 +3015,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
---- !u!224 &5102030418011787476 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1437115673792113884, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
-  m_PrefabInstance: {fileID: 6142809516188826632}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5682192653787655011 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
@@ -2845,6 +3036,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb87efbcbe8ce34fb3a39e91a83c036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &5102030418011787476 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1437115673792113884, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+  m_PrefabInstance: {fileID: 6142809516188826632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6142809516191319027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2936,6 +3132,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009890391604205419, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
+      propertyPath: _sfxPlayer
+      value: 
+      objectReference: {fileID: 8114638887937407837}
     - target: {fileID: 7305796134895907566, guid: 08f29e60cc1eb8c418052e43bc9cd9ea, type: 3}
       propertyPath: m_Name
       value: DancePadCell (10)

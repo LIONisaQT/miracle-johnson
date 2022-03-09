@@ -7,11 +7,31 @@ namespace Disco
 		private int _selectedCellIndex;
 		private DancePadCell _selectedCell;
 
+		private AudioSource _sfxPlayer;
+		private uint _currentCombo;
+		private uint _currentStreak;
+
 		[SerializeField] private DancePadCell[] _cells;
+
+		[SerializeField] private AudioClip _successSfx;
+		[SerializeField] private AudioClip _failSfx;
+		[SerializeField] private AudioClip _bigComboSfx;
+
+		private void Awake()
+		{
+			_sfxPlayer = GetComponent<AudioSource>();
+		}
 
 		public void Start()
 		{
 			SelectCell(_cells.Length / 2); // Select middle cell
+
+			foreach (var cell in _cells)
+			{
+				cell.OnInputCallback += OnCellInput;
+				cell.OnSuccessCallback += OnSuccess;
+				cell.OnFailCallback += OnFail;
+			}
 		}
 
 		public void Update()
@@ -29,6 +49,7 @@ namespace Disco
 			_selectedCellIndex = index;
 			_selectedCell = _cells[index];
 			_selectedCell.ToggleCell(true);
+			_selectedCell.CurrentCombo = _currentCombo;
 		}
 
 		public void SendNotedata(NoteData[] data)
@@ -85,8 +106,27 @@ namespace Disco
 					break;
 			}
 
+			_currentCombo++;
 			SelectCell(_selectedCellIndex);
 		}
 		#endregion
+
+		public void OnCellInput()
+		{
+			_currentCombo = 0;
+		}
+
+		public void OnSuccess()
+		{
+			var clip = _currentCombo > 1 ? _bigComboSfx : _successSfx;
+			_sfxPlayer.PlayOneShot(clip);
+
+			_currentStreak++;
+		}
+
+		public void OnFail()
+		{
+			_currentStreak = 0;
+		}
 	}
 }

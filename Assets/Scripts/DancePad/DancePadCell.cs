@@ -8,6 +8,10 @@ namespace Disco
 {
 	public class DancePadCell : MonoBehaviour
 	{
+		public Action OnInputCallback;
+		public Action OnSuccessCallback;
+		public Action OnFailCallback;
+
 		private const uint PREVIEW_DURATION = 3;
 		private const float WINDOW_BEFORE = 0.5f;
 		private const float WINDOW_AFTER = 0.5f;
@@ -16,36 +20,37 @@ namespace Disco
 		private const string TOP_HIT_STRING = "Steps";
 		private const string BOTTOM_HIT_STRING = "Combo";
 
-		[SerializeField] private Image _cellImage;
-		[SerializeField] private Image _timingRing;
-		[SerializeField] private TextMeshProUGUI _keyText;
-		[SerializeField] private TextMeshProUGUI _topText;
-		[SerializeField] private TextMeshProUGUI _bottomText;
-
-		private Animator _animator;
-
-		private Queue<NoteData> _noteData;
-		private NoteData _currentNote;
-
-		private readonly List<KeyCode> _acceptableKeys = new List<KeyCode>()
-		{
-			KeyCode.I, KeyCode.J, KeyCode.K, KeyCode.L
-		};
-
 		private enum CellState
 		{
 			Idle,           // Cell is doing nothing
 			ShowingPreview, // Cell is showing visual countdown and can accept erroneous input
 			InputWindow,    // Cell can accept correct timing input
 		}
-		private CellState _cellState;
 
-		[SerializeField] private KeyCode? _key;
+		private readonly List<KeyCode> _acceptableKeys = new List<KeyCode>()
+		{
+			KeyCode.I, KeyCode.J, KeyCode.K, KeyCode.L
+		};
+
+		[SerializeField] private Image _cellImage;
+		[SerializeField] private Image _timingRing;
+		[SerializeField] private TextMeshProUGUI _keyText;
+		[SerializeField] private TextMeshProUGUI _topText;
+		[SerializeField] private TextMeshProUGUI _bottomText;
+		[SerializeField] private AudioSource _sfxPlayer;
+
 		[SerializeField] private bool _isSelected = false;
 		[SerializeField] private Color _selectedColor = Color.red;
 		[SerializeField] private Color _deselectedColor = Color.white;
 
+		private Animator _animator;
+		private Queue<NoteData> _noteData;
+		private NoteData _currentNote;
+		private CellState _cellState;
+
 		public bool IsSelected => _isSelected;
+		public uint CurrentCombo { get; set; }
+		public uint CurrentStreak { get; set; }
 
 		private void Awake()
 		{
@@ -164,12 +169,23 @@ namespace Disco
 
 			_animator.Play("NoteShowText");
 
-			_topText.text = successful ? TOP_HIT_STRING : MISS_STRING;
-			_bottomText.text = successful ? BOTTOM_HIT_STRING : String.Empty;
+			_topText.text = successful ? $"{CurrentCombo} {TOP_HIT_STRING}" : MISS_STRING;
+			_bottomText.text = successful ? $"{CurrentStreak} {BOTTOM_HIT_STRING}" : String.Empty;
 
 			_currentNote = _noteData.Count > 0 ? _noteData.Dequeue() : null;
 
 			_cellState = CellState.Idle;
+
+			if (successful)
+			{
+				OnSuccessCallback?.Invoke();
+			}
+			else
+			{
+				OnFailCallback?.Invoke();
+			}
+
+			OnInputCallback?.Invoke();
 		}
 	}
 }
