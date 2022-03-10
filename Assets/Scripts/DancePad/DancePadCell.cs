@@ -165,7 +165,14 @@ namespace Disco
 		// TODO: Make this accept an enum (early, hit, slightly late, miss)
 		private void HandleInputResult(bool successful)
 		{
-			print($"{name}: {(successful ? "You got it!" : "Miss!")}");
+			if (successful)
+			{
+				OnSuccessCallback?.Invoke();
+			}
+			else
+			{
+				OnFailCallback?.Invoke();
+			}
 
 			_animator.Play("NoteShowText");
 
@@ -175,15 +182,6 @@ namespace Disco
 			_currentNote = _noteData.Count > 0 ? _noteData.Dequeue() : null;
 
 			_cellState = CellState.Idle;
-
-			if (successful)
-			{
-				OnSuccessCallback?.Invoke();
-			}
-			else
-			{
-				OnFailCallback?.Invoke();
-			}
 
 			OnInputCallback?.Invoke();
 		}

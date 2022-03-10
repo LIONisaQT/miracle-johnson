@@ -4,6 +4,8 @@ namespace Disco
 {
 	public class DancePad : MonoBehaviour
 	{
+		private const uint BIG_COMBO = 4;
+
 		private int _selectedCellIndex;
 		private DancePadCell _selectedCell;
 
@@ -118,10 +120,11 @@ namespace Disco
 
 		public void OnSuccess()
 		{
-			var clip = _currentCombo > 1 ? _bigComboSfx : _successSfx;
+			var clip = _currentCombo >= BIG_COMBO ? _bigComboSfx : _successSfx;
 			_sfxPlayer.PlayOneShot(clip);
 
 			_currentStreak++;
+			_selectedCell.CurrentStreak = _currentStreak;
 		}
 
 		public void OnFail()

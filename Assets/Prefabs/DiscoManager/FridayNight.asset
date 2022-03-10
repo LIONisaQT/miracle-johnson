@@ -15,18 +15,165 @@ MonoBehaviour:
   Id: friday-night
   Song: {fileID: 8300000, guid: c334ef8eb791d3144a49b86ebc1f0b3b, type: 3}
   Notes:
-  - location: 12
-    key: 0
-    timeInSong: 3
-  - location: 7
-    key: 1
-    timeInSong: 4
-  - location: 2
+  - location: 3
     key: 2
-    timeInSong: 5
+    timeInSong: 23
+  - location: 21
+    key: 1
+    timeInSong: 26
+  - location: 11
+    key: 3
+    timeInSong: 27
+  - location: 13
+    key: 0
+    timeInSong: 28
+  - location: 23
+    key: 1
+    timeInSong: 29
+  - location: 21
+    key: 2
+    timeInSong: 30
+  - location: 9
+    key: 2
+    timeInSong: 32
+  - location: 15
+    key: 1
+    timeInSong: 33
+  - location: 21
+    key: 3
+    timeInSong: 34
+  - location: 23
+    key: 0
+    timeInSong: 35
+  - location: 13
+    key: 1
+    timeInSong: 36
+  - location: 12
+    key: 2
+    timeInSong: 36.5
+  - location: 11
+    key: 3
+    timeInSong: 37
+  - location: 23
+    key: 2
+    timeInSong: 39
+  - location: 1
+    key: 1
+    timeInSong: 41
+  - location: 11
+    key: 3
+    timeInSong: 42
+  - location: 15
+    key: 0
+    timeInSong: 43
+  - location: 17
+    key: 1
+    timeInSong: 44
+  - location: 19
+    key: 2
+    timeInSong: 45
+  - location: 5
+    key: 2
+    timeInSong: 47
+  - location: 23
+    key: 1
+    timeInSong: 49
+  - location: 21
+    key: 3
+    timeInSong: 50
+  - location: 11
+    key: 0
+    timeInSong: 51
+  - location: 10
+    key: 1
+    timeInSong: 51.5
+  - location: 15
+    key: 2
+    timeInSong: 52
+  - location: 16
+    key: 3
+    timeInSong: 52.5
+  - location: 17
+    key: 0
+    timeInSong: 53
+  - location: 19
+    key: 2
+    timeInSong: 54
+  - location: 1
+    key: 1
+    timeInSong: 56
   - location: 3
     key: 3
-    timeInSong: 6
+    timeInSong: 57
+  - location: 13
+    key: 0
+    timeInSong: 58
+  - location: 11
+    key: 1
+    timeInSong: 59
+  - location: 21
+    key: 2
+    timeInSong: 60
+  - location: 3
+    key: 3
+    timeInSong: 62
+  - location: 21
+    key: 1
+    timeInSong: 64
+  - location: 23
+    key: 3
+    timeInSong: 65
+  - location: 13
+    key: 0
+    timeInSong: 66
+  - location: 11
+    key: 1
+    timeInSong: 67
+  - location: 16
+    key: 2
+    timeInSong: 67.5
+  - location: 21
+    key: 3
+    timeInSong: 68
+  - location: 3
+    key: 2
+    timeInSong: 70
+  - location: 15
+    key: 1
+    timeInSong: 72
+  - location: 5
+    key: 3
+    timeInSong: 73
+  - location: 7
+    key: 0
+    timeInSong: 74
+  - location: 11
+    key: 1
+    timeInSong: 75
+  - location: 17
+    key: 2
+    timeInSong: 76
+  - location: 2
+    key: 2
+    timeInSong: 78
+  - location: 21
+    key: 1
+    timeInSong: 79
+  - location: 23
+    key: 3
+    timeInSong: 80
+  - location: 13
+    key: 0
+    timeInSong: 81.5
   - location: 12
     key: 1
-    timeInSong: 7
+    timeInSong: 82
+  - location: 11
+    key: 2
+    timeInSong: 82.5
+  - location: 6
+    key: 3
+    timeInSong: 83
+  - location: 1
+    key: 0
+    timeInSong: 83.5
